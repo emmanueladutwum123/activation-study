@@ -21,6 +21,8 @@ make all                  # lint, tests, and the full study
 active on day 1, 26.8% on day 7, 21.7% on day 30, 9.1% at a year. Whatever decides a
 user's fate has mostly decided it before the first week is out.
 
+![retention curve](figures/01_retention_curve.png)
+
 **One day-0 behaviour separates users sharply: whether they came back for a second
 session that same day.**
 
@@ -62,6 +64,8 @@ leaves most of the outcome unexplained. Both numbers are the finding.
 a result about the choice.** The effect holds in every signup cohort from 1996 to 2008
 (lift 1.84×–3.16×, through fourteen years of the product and the internet changing), and
 it survives redefining "a session" at 10, 30, 60 and 120-minute gaps (lift 2.46×–2.73×).
+
+![lift by signup cohort](figures/04_stability_by_year.png)
 
 ---
 

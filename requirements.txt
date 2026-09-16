@@ -1,0 +1,12 @@
+# Pinned to the versions the committed results/findings.json was produced with.
+# statsmodels drives the logistic model and pandas 3 changed groupby defaults, so
+# these two in particular are pins rather than floors.
+pandas==3.0.5
+numpy==2.5.3
+pyarrow==25.0.1
+scipy==1.18.1
+statsmodels==0.15.0
+matplotlib==3.11.2
+
+pytest==9.1.1
+ruff==0.14.5

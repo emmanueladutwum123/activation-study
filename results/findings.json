@@ -1,0 +1,474 @@
+{
+  "dataset": {
+    "name": "MovieLens 10M",
+    "ratings": 10000054,
+    "users_total": 69878,
+    "users_eligible": 65947,
+    "eligibility_rule": "at least 20 ratings on day 0",
+    "cohort_span": [
+      "1995-01-09",
+      "2009-01-05"
+    ]
+  },
+  "retention_curve": [
+    {
+      "day": 1,
+      "users_active": 21509,
+      "share": 0.3261558524269489
+    },
+    {
+      "day": 7,
+      "users_active": 17699,
+      "share": 0.2683821856945729
+    },
+    {
+      "day": 14,
+      "users_active": 16199,
+      "share": 0.24563664761096032
+    },
+    {
+      "day": 30,
+      "users_active": 14305,
+      "share": 0.21691661485738548
+    },
+    {
+      "day": 60,
+      "users_active": 12463,
+      "share": 0.1889850940907092
+    },
+    {
+      "day": 90,
+      "users_active": 11172,
+      "share": 0.16940876764674662
+    },
+    {
+      "day": 180,
+      "users_active": 8782,
+      "share": 0.1331675436335239
+    },
+    {
+      "day": 365,
+      "users_active": 6022,
+      "share": 0.09131575355967671
+    }
+  ],
+  "retention_by_sessions": [
+    {
+      "day": 7,
+      "d0_sessions": 1,
+      "users": 51761,
+      "share": 0.1982766948088329
+    },
+    {
+      "day": 7,
+      "d0_sessions": 2,
+      "users": 9802,
+      "share": 0.4671495613140175
+    },
+    {
+      "day": 7,
+      "d0_sessions": 3,
+      "users": 4384,
+      "share": 0.6516879562043796
+    },
+    {
+      "day": 30,
+      "d0_sessions": 1,
+      "users": 51761,
+      "share": 0.1574737736906165
+    },
+    {
+      "day": 30,
+      "d0_sessions": 2,
+      "users": 9802,
+      "share": 0.380738624770455
+    },
+    {
+      "day": 30,
+      "d0_sessions": 3,
+      "users": 4384,
+      "share": 0.552463503649635
+    },
+    {
+      "day": 90,
+      "d0_sessions": 1,
+      "users": 51761,
+      "share": 0.12039952860261587
+    },
+    {
+      "day": 90,
+      "d0_sessions": 2,
+      "users": 9802,
+      "share": 0.2999387880024485
+    },
+    {
+      "day": 90,
+      "d0_sessions": 3,
+      "users": 4384,
+      "share": 0.4562043795620438
+    },
+    {
+      "day": 180,
+      "d0_sessions": 1,
+      "users": 51761,
+      "share": 0.09271459206738664
+    },
+    {
+      "day": 180,
+      "d0_sessions": 2,
+      "users": 9802,
+      "share": 0.23760457049581718
+    },
+    {
+      "day": 180,
+      "d0_sessions": 3,
+      "users": 4384,
+      "share": 0.3772810218978102
+    },
+    {
+      "day": 365,
+      "d0_sessions": 1,
+      "users": 51761,
+      "share": 0.06043159908038871
+    },
+    {
+      "day": 365,
+      "d0_sessions": 2,
+      "users": 9802,
+      "share": 0.16802693327892268
+    },
+    {
+      "day": 365,
+      "d0_sessions": 3,
+      "users": 4384,
+      "share": 0.2844434306569343
+    }
+  ],
+  "sessions_controlling_for_volume": [
+    {
+      "volume_quartile": "Q1",
+      "median_d0_ratings": 25.0,
+      "n_single": 15909,
+      "n_multi": 1394,
+      "return_single": 0.12433213904079451,
+      "return_multi": 0.33931133428981347,
+      "lift_x": 2.7290717983906183
+    },
+    {
+      "volume_quartile": "Q2",
+      "median_d0_ratings": 44.0,
+      "n_single": 13631,
+      "n_multi": 2151,
+      "return_single": 0.17078717628934048,
+      "return_multi": 0.4402603440260344,
+      "lift_x": 2.5778302188225406
+    },
+    {
+      "volume_quartile": "Q3",
+      "median_d0_ratings": 79.0,
+      "n_single": 12872,
+      "n_multi": 3568,
+      "return_single": 0.23143256681168428,
+      "return_multi": 0.507567264573991,
+      "lift_x": 2.1931540213482417
+    },
+    {
+      "volume_quartile": "Q4",
+      "median_d0_ratings": 185.0,
+      "n_single": 9349,
+      "n_multi": 7073,
+      "return_single": 0.3185367418975292,
+      "return_multi": 0.5945143503463877,
+      "lift_x": 1.8663917600363928
+    }
+  ],
+  "logistic_model": {
+    "n": 65947,
+    "pseudo_r2": 0.09902477918458774,
+    "terms": {
+      "const": {
+        "coefficient": -1.8552753029486952,
+        "odds_ratio": 0.15640987664687853,
+        "p_value": 2.2841397430036896e-23,
+        "ci_low_or": 0.10856908944482938,
+        "ci_high_or": 0.22533162650427718
+      },
+      "multi_session": {
+        "coefficient": 1.182509007613125,
+        "odds_ratio": 3.2625497044496936,
+        "p_value": 0.0,
+        "ci_low_or": 3.1288242706789884,
+        "ci_high_or": 3.4019905412248903
+      },
+      "log_volume": {
+        "coefficient": 0.47930022261828137,
+        "odds_ratio": 1.6149439054732142,
+        "p_value": 0.0,
+        "ci_low_or": 1.57638835941167,
+        "ci_high_or": 1.654442448939699
+      },
+      "log_popularity": {
+        "coefficient": -0.14006094102909086,
+        "odds_ratio": 0.8693052574275745,
+        "p_value": 2.2638516021052794e-16,
+        "ci_low_or": 0.8407096752916119,
+        "ci_high_or": 0.8988734789201744
+      },
+      "d0_rating_std": {
+        "coefficient": -0.2747844712201176,
+        "odds_ratio": 0.7597358505212582,
+        "p_value": 8.857819808932016e-11,
+        "ci_low_or": 0.6991923887310174,
+        "ci_high_or": 0.8255218046850201
+      }
+    }
+  },
+  "stability_by_year": [
+    {
+      "year": 1996,
+      "users": 16285,
+      "return_single": 0.12895742358078602,
+      "return_multi": 0.40699815837937386,
+      "lift_x": 3.15606614243815
+    },
+    {
+      "year": 1997,
+      "users": 5772,
+      "return_single": 0.14434380420119483,
+      "return_multi": 0.4305317324185249,
+      "lift_x": 2.982682455967591
+    },
+    {
+      "year": 1998,
+      "users": 1582,
+      "return_single": 0.23534010946051603,
+      "return_multi": 0.43234323432343236,
+      "lift_x": 1.8370996568095348
+    },
+    {
+      "year": 1999,
+      "users": 5234,
+      "return_single": 0.2983273923772964,
+      "return_multi": 0.5589161940768747,
+      "lift_x": 1.8734994115793768
+    },
+    {
+      "year": 2000,
+      "users": 7319,
+      "return_single": 0.21074741816908804,
+      "return_multi": 0.5049813200498132,
+      "lift_x": 2.3961447520303847
+    },
+    {
+      "year": 2001,
+      "users": 4183,
+      "return_single": 0.21388888888888888,
+      "return_multi": 0.47613997879109227,
+      "lift_x": 2.226108991750561
+    },
+    {
+      "year": 2002,
+      "users": 2757,
+      "return_single": 0.25596421471172964,
+      "return_multi": 0.5315436241610738,
+      "lift_x": 2.076632566625399
+    },
+    {
+      "year": 2003,
+      "users": 3156,
+      "return_single": 0.27132125497127707,
+      "return_multi": 0.574468085106383,
+      "lift_x": 2.117298496084275
+    },
+    {
+      "year": 2004,
+      "users": 3091,
+      "return_single": 0.24354911724762335,
+      "return_multi": 0.5839002267573696,
+      "lift_x": 2.397463942206375
+    },
+    {
+      "year": 2005,
+      "users": 5481,
+      "return_single": 0.24097610574478903,
+      "return_multi": 0.5959922430510666,
+      "lift_x": 2.473242071901789
+    },
+    {
+      "year": 2006,
+      "users": 3720,
+      "return_single": 0.24395604395604395,
+      "return_multi": 0.6050505050505051,
+      "lift_x": 2.4801619801619803
+    },
+    {
+      "year": 2007,
+      "users": 3229,
+      "return_single": 0.2542295381801555,
+      "return_multi": 0.5854126679462572,
+      "lift_x": 2.302693353954073
+    },
+    {
+      "year": 2008,
+      "users": 4067,
+      "return_single": 0.18870056497175142,
+      "return_multi": 0.48796033994334276,
+      "lift_x": 2.585897609879391
+    }
+  ],
+  "session_gap_sensitivity": [
+    {
+      "gap_minutes": 10,
+      "share_multi_session": 0.3248821022942666,
+      "return_single": 0.18206729257445758,
+      "return_multi": 0.4477479579929988,
+      "lift_x": 2.4592443357715634
+    },
+    {
+      "gap_minutes": 30,
+      "share_multi_session": 0.2151121355027522,
+      "return_single": 0.1982766948088329,
+      "return_multi": 0.5241787677992387,
+      "lift_x": 2.643673117027808
+    },
+    {
+      "gap_minutes": 60,
+      "share_multi_session": 0.1842540221693178,
+      "return_single": 0.20443899174659827,
+      "return_multi": 0.5514772446712205,
+      "lift_x": 2.697514989482904
+    },
+    {
+      "gap_minutes": 120,
+      "share_multi_session": 0.1564286472470317,
+      "return_single": 0.21119519692257913,
+      "return_multi": 0.5767739433889104,
+      "lift_x": 2.730999339915608
+    }
+  ],
+  "opportunity": {
+    "single_session_users": 51761,
+    "single_session_share": 0.7848878644972478,
+    "return_rate_single": 0.1982766948088329,
+    "return_rate_multi": 0.5241787677992387,
+    "observed_gap_pp": 32.59020729904057,
+    "naive_upper_bound_pp": 32.59020729904057,
+    "scenarios": {
+      "convert5_attrib10": {
+        "converted_share": 0.05,
+        "causal_share_of_gap": 0.1,
+        "absolute_lift_pp": 0.1629510364952029,
+        "new_return_rate": 0.19990620517378493,
+        "users_retained_extra": 84
+      },
+      "convert5_attrib25": {
+        "converted_share": 0.05,
+        "causal_share_of_gap": 0.25,
+        "absolute_lift_pp": 0.40737759123800715,
+        "new_return_rate": 0.20235047072121295,
+        "users_retained_extra": 211
+      },
+      "convert5_attrib50": {
+        "converted_share": 0.05,
+        "causal_share_of_gap": 0.5,
+        "absolute_lift_pp": 0.8147551824760143,
+        "new_return_rate": 0.20642424663359304,
+        "users_retained_extra": 422
+      },
+      "convert10_attrib10": {
+        "converted_share": 0.1,
+        "causal_share_of_gap": 0.1,
+        "absolute_lift_pp": 0.3259020729904058,
+        "new_return_rate": 0.20153571553873695,
+        "users_retained_extra": 169
+      },
+      "convert10_attrib25": {
+        "converted_share": 0.1,
+        "causal_share_of_gap": 0.25,
+        "absolute_lift_pp": 0.8147551824760143,
+        "new_return_rate": 0.20642424663359304,
+        "users_retained_extra": 422
+      },
+      "convert10_attrib50": {
+        "converted_share": 0.1,
+        "causal_share_of_gap": 0.5,
+        "absolute_lift_pp": 1.6295103649520286,
+        "new_return_rate": 0.21457179845835317,
+        "users_retained_extra": 843
+      },
+      "convert20_attrib10": {
+        "converted_share": 0.2,
+        "causal_share_of_gap": 0.1,
+        "absolute_lift_pp": 0.6518041459808116,
+        "new_return_rate": 0.204794736268641,
+        "users_retained_extra": 337
+      },
+      "convert20_attrib25": {
+        "converted_share": 0.2,
+        "causal_share_of_gap": 0.25,
+        "absolute_lift_pp": 1.6295103649520286,
+        "new_return_rate": 0.21457179845835317,
+        "users_retained_extra": 843
+      },
+      "convert20_attrib50": {
+        "converted_share": 0.2,
+        "causal_share_of_gap": 0.5,
+        "absolute_lift_pp": 3.2590207299040572,
+        "new_return_rate": 0.23086690210787347,
+        "users_retained_extra": 1687
+      }
+    }
+  },
+  "traffic": {
+    "window_years": "2007-2008",
+    "users_in_window": 7695,
+    "users_per_day": 10.53388090349076
+  },
+  "experiment_designs": {
+    "mde_1pp": {
+      "absolute_mde_pp": 1.0,
+      "relative_mde": 0.05043457078826854,
+      "per_arm_triggered": 25420,
+      "total_triggered": 50840,
+      "total_enrolled": 64774,
+      "days_at_current_traffic": 6149.0712270179565,
+      "years_at_current_traffic": 16.835239499022467
+    },
+    "mde_2pp": {
+      "absolute_mde_pp": 2.0,
+      "relative_mde": 0.10086914157653708,
+      "per_arm_triggered": 6468,
+      "total_triggered": 12936,
+      "total_enrolled": 16481,
+      "days_at_current_traffic": 1564.6023877400528,
+      "years_at_current_traffic": 4.283647878822869
+    },
+    "mde_3pp": {
+      "absolute_mde_pp": 3.0,
+      "relative_mde": 0.1513037123648056,
+      "per_arm_triggered": 2923,
+      "total_triggered": 5846,
+      "total_enrolled": 7448,
+      "days_at_current_traffic": 707.0706214230325,
+      "years_at_current_traffic": 1.9358538574210338
+    },
+    "mde_5pp": {
+      "absolute_mde_pp": 5.0,
+      "relative_mde": 0.2521728539413427,
+      "per_arm_triggered": 1086,
+      "total_triggered": 2172,
+      "total_enrolled": 2767,
+      "days_at_current_traffic": 262.7022561975413,
+      "years_at_current_traffic": 0.7192395789118174
+    },
+    "what_one_quarter_buys": {
+      "triggered_users_in_90_days": 744,
+      "per_arm": 372,
+      "detectable_absolute_pp": 8.190217870095108
+    }
+  },
+  "peeking_false_positive_rate": {
+    "one_look": 0.05,
+    "daily_for_14_days": 0.214
+  }
+}
